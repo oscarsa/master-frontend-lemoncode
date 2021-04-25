@@ -25,13 +25,13 @@ $colors: gold, orangered, mediumturquoise;
 
     @for $i from 1 through 4 {
         .container-#{$j} > .darken-#{$i} {
-            background-color: darken($color, percentage($i/20));
+            background-color: darken($color, percentage($i/12));
         } 
     } 
     
     @for $i from 1 through 4 {
         .container-#{$j} > .lighten-#{$i} {
-            background-color: lighten($color, percentage($i/10));
+            background-color: lighten($color, percentage($i/12));
         } 
     } 
 }
