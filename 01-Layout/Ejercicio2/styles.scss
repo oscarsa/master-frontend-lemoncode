@@ -1,0 +1,35 @@
+//Sass desaconseja el uso de imports, por lo que usaré use
+//https://sass-lang.com/documentation/at-rules/import
+@use 'theme1' as theme;
+
+div {
+    margin: 10px;
+}
+
+.box {
+    background-color: theme.$color;
+    height: 50px;
+    width: 75px;
+    padding: 15px;
+    border-radius: theme.$borderRadius;
+}
+
+.important {
+    background-color: darken(theme.$color, 20%);
+}
+
+.warning {
+    background-color: complement(theme.$color);
+}
+
+.principal-font {
+    font-family: theme.$principalFont;
+}
+
+.secondary-font {
+    font-family: theme.$secondaryFont;
+}
+
+.shadow {
+    box-shadow: theme.$shadow;
+}
