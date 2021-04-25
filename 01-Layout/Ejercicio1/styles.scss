@@ -1,0 +1,38 @@
+@use 'sass:list';
+$colors: gold, orangered, mediumturquoise;
+
+.box {
+    color: grey;
+    padding: 20px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+//Loop through containers
+@for $j from 1 through 3 {
+    $color:  list.nth($colors, $j);
+
+    .container-#{$j} {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .container-#{$j} > .base-color {
+        background-color: $color;
+        color: white;
+    } 
+
+    @for $i from 1 through 4 {
+        .container-#{$j} > .darken-#{$i} {
+            background-color: darken($color, percentage($i/20));
+        } 
+    } 
+    
+    @for $i from 1 through 4 {
+        .container-#{$j} > .lighten-#{$i} {
+            background-color: lighten($color, percentage($i/10));
+        } 
+    } 
+}
+
