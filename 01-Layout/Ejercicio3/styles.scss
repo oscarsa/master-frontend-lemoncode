@@ -1,0 +1,29 @@
+body {
+    padding: 20px;
+    font-family: sans-serif;
+}
+.topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: cadetblue;
+}
+.topnav > a{
+    padding: 10px;
+}
+
+.topnav > a {
+    text-decoration: none;
+    color: white;
+}
+
+.topnav > a:hover {
+    background-color: steelblue;
+} 
+
+@media screen and (max-width: 640px) {
+    .topnav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
